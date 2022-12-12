@@ -6,11 +6,11 @@ inputForm.addEventListener('submit', e => {
   const { email, password } = e.currentTarget.elements;
   if (!email.value || !password.value) {
     alert('Наявне пусте поле');
-  } else {
-    dataObj.email = email.value;
-    dataObj.password = password.value;
-    e.currentTarget.reset();
+    return;
   }
+  dataObj.email = email.value;
+  dataObj.password = password.value;
+  e.currentTarget.reset();
 });
 
 console.log(dataObj);
