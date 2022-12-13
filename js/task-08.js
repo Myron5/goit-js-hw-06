@@ -1,6 +1,5 @@
 const inputForm = document.querySelector('form.login-form');
 
-const dataObj = {};
 inputForm.addEventListener('submit', e => {
   e.preventDefault();
   const { email, password } = e.currentTarget.elements;
@@ -8,9 +7,7 @@ inputForm.addEventListener('submit', e => {
     alert('Наявне пусте поле');
     return;
   }
-  dataObj.email = email.value;
-  dataObj.password = password.value;
+  const dataObj = { email: email.value, password: password.value };
+  console.log(dataObj);
   e.currentTarget.reset();
 });
-
-console.log(dataObj);

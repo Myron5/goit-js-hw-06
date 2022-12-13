@@ -1,5 +1,5 @@
 const inputEl = document.querySelector('#validation-input');
-const charCount = inputEl.dataset.length;
+const charCount = Number(inputEl.dataset.length);
 console.log(charCount);
 
 inputEl.addEventListener('blur', e => {
